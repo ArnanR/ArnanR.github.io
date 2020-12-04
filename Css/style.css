@@ -233,7 +233,7 @@ body nav a:hover {
 
 .parallax3 {
   /* The image used */
-  background-image: url("img/atv.jpg");
+  background-image: url("../img/atv.jpg");
   /* Set a specific height */
   min-height: 950px;
   /* Create the parallax scrolling effect */
