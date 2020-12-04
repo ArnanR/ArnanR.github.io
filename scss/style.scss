@@ -1,0 +1,395 @@
+// Fonts-------------------------------------
+$fontTittle: "Major Mono Display", monospace;
+$fontTekst: "Cinzel", serif;
+$fontTekst2: "Amatic SC", cursive;
+// Colors------------------------------------
+$textWhite: #f1f1f1;
+$textDark: #000000;
+
+body {
+    // height: 100vh;
+    width: 100%;
+    h1 {
+        font-family: $fontTittle;
+    }
+    h5 {
+        font-family: $fontTittle;
+        // color: $textWhite;
+        font-size: 18px;
+    }
+    p {
+        font-family: $fontTekst2;
+        font-size: 23px;
+    }
+    a {
+        font-family: $fontTekst;
+    }
+    nav a {
+        font-size: 25px;
+        font-family: $fontTittle;
+        font-weight: bold;
+        color: $textDark;
+        &:hover {
+            color: $textWhite;
+        }
+    }
+}
+
+.text-focus-in {
+    animation: text-focus-in 8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+.slide-in-blurred-top {
+    animation: slide-in-blurred-top 3s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.tracking-in-expand {
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+.wobble-hor-bottom {
+    -webkit-animation: wobble-hor-bottom 2s 2s infinite both;
+    animation: wobble-hor-bottom 2s 2s infinite both;
+}
+
+@keyframes text-focus-in {
+    0% {
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-blurred-top {
+    0% {
+        transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+        transform-origin: 50% 0%;
+        filter: blur(40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) scaleY(1) scaleX(1);
+        transform-origin: 50% 50%;
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes wobble-hor-bottom {
+    // 0%,
+    100% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+    15% {
+        -webkit-transform: translateX(-30px) rotate(-6deg);
+        transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+        -webkit-transform: translateX(15px) rotate(6deg);
+        transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+        -webkit-transform: translateX(-15px) rotate(-3.6deg);
+        transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+        -webkit-transform: translateX(9px) rotate(2.4deg);
+        transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+        -webkit-transform: translateX(-6px) rotate(-1.2deg);
+        transform: translateX(-6px) rotate(-1.2deg);
+    }
+}
+@keyframes wobble-hor-bottom {
+    0%,
+    100% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+    15% {
+        -webkit-transform: translateX(-30px) rotate(-6deg);
+        transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+        -webkit-transform: translateX(15px) rotate(6deg);
+        transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+        -webkit-transform: translateX(-15px) rotate(-3.6deg);
+        transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+        -webkit-transform: translateX(9px) rotate(2.4deg);
+        transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+        -webkit-transform: translateX(-6px) rotate(-1.2deg);
+        transform: translateX(-6px) rotate(-1.2deg);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contentLanding {
+        top: -300px;
+        h1 {
+            font-size: 30px;
+            text-align: center;
+        }
+        .knop1 {
+            display: none;
+        }
+        .textLanding {
+            padding-top: 25px;
+        }
+    }
+
+    .navig {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: -210px;
+    }
+    .zijSectie {
+        h1 {
+            font-size: 25px;
+        }
+    }
+
+    .homeContent2 {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .homeContent2 {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .contentLanding {
+        border-top-right-radius: 13px;
+        border-bottom-right-radius: 13px;
+    }
+}
+
+#myVideoLanding {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#myVideoHome {
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.filterPurpleLanding {
+    position: fixed;
+    background: rgba(118, 44, 128, 0.5);
+    color: $textWhite;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.contentLanding {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin-left: 0;
+    height: 400px;
+}
+
+.knop2 {
+    position: fixed;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0;
+}
+
+.parallax1 {
+    /* The image used */
+    background-image: url("../img/travel1.jpg");
+
+    /* Set a specific height */
+    min-height: 950px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 {
+    /* The image used */
+    background-image: url("../img/travel2.jpg");
+
+    /* Set a specific height */
+    min-height: 450px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax3 {
+    /* The image used */
+    background-image: url("../img/atv.jpg");
+
+    /* Set a specific height */
+    min-height: 950px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax4 {
+    /* The image used */
+    background-image: url("../img/atv2.jpg");
+
+    /* Set a specific height */
+    min-height: 450px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax5 {
+    /* The image used */
+    background-image: url("../img/contact1.jpg");
+
+    /* Set a specific height */
+    min-height: 950px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax6 {
+    /* The image used */
+    background-image: url("../img/contact2.jpg");
+
+    /* Set a specific height */
+    min-height: 450px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax7 {
+    /* The image used */
+    background-image: url("../img/aviation.jpg");
+
+    /* Set a specific height */
+    min-height: 950px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax8 {
+    /* The image used */
+    background-image: url("../img/contact1.jpg");
+
+    /* Set a specific height */
+    min-height: 450px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.zijSectie {
+    background: rgba(0, 0, 0, 0.5);
+    // width: 40%;
+    color: $textWhite;
+    margin-top: 300px;
+    padding: 5px;
+    h1 {
+        padding: 25px;
+    }
+    p {
+        text-align: justify;
+        padding: 5px;
+    }
+}
+
+.homeContent {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 85px;
+    height: 300px;
+}
+
+.aboutContent {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 85px;
+    height: 620px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homeContent2 {
+    text-align: center;
+}
+
+.card {
+    background-color: rgba(238, 238, 238, 0.5);
+}
+
+.cardShadow {
+    
+
+    & :hover {
+        box-shadow: 2px 2px 4px #000000;
+
+        h5,
+        p,
+        img,
+        i {
+            box-shadow: none;
+        }
+    }
+}
